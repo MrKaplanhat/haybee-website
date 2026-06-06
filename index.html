@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haybee Agrosciences Enterprises | Veterinary Pharmaceuticals & Animal Health Nigeria</title>
+<meta name="description" content="Haybee Agrosciences Enterprises – Nigeria's trusted veterinary pharmaceutical manufacturer for 30+ years. Antibiotics, multivitamins, aquaculture, poultry, and livestock health products.">
+<meta name="keywords" content="veterinary pharmaceuticals Nigeria, animal health products Nigeria, fish medication Nigeria, poultry medication Nigeria, aquaculture health solutions, livestock supplements, veterinary drugs Nigeria">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B2B6B;
+  --navy-dark: #0F1A45;
+  --navy-mid: #243280;
+  --red: #CC1F1F;
+  --red-dark: #A01515;
+  --red-light: #E53535;
+  --yellow: #F5D847;
+  --yellow-dark: #C8AC00;
+  --yellow-light: #FBE96A;
+  --white: #FFFFFF;
+  --off-white: #F5F7FC;
+  --light-blue: #EEF1FA;
+  --border: #DCE2F0;
+  --text-dark: #0F1A45;
+  --text-mid: #4A5380;
+  --text-light: #8B94B8;
+  --shadow-sm: 0 2px 12px rgba(27,43,107,0.08);
+  --shadow-md: 0 8px 32px rgba(27,43,107,0.14);
+  --shadow-lg: 0 20px 60px rgba(27,43,107,0.2);
+  --radius: 6px; --radius-lg: 14px; --radius-xl: 22px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Montserrat",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Lora",serif;line-height:1.15}
+h1{font-size:clamp(2.1rem,4.5vw,3.8rem);font-weight:700}
+h2{font-size:clamp(1.7rem,3vw,2.8rem);font-weight:700}
+h3{font-size:clamp(1.15rem,2vw,1.6rem);font-weight:600}
+h4{font-size:1rem;font-weight:700}
+p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
+.container{max-width:1220px;margin:0 auto;padding:0 24px}
+.section{padding:88px 0}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy-dark);border-bottom:3px solid var(--red);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.35)}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav__logo img{height:46px;width:auto;display:block}
+.nav__links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav__links a{text-decoration:none;font-size:.8rem;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:.06em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:4px}
+.nav__links a::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--yellow);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.nav__links a:hover{color:var(--yellow)}
+.nav__links a:hover::after{transform:scaleX(1)}
+.nav__cta{background:var(--red);color:#fff;padding:10px 22px;border-radius:var(--radius);font-size:.78rem;font-weight:800;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;border:2px solid var(--red);display:flex;align-items:center;gap:8px}
+.nav__cta:hover{background:transparent;color:var(--red)}
+.nav__hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav__hamburger span{display:block;width:24px;height:2px;background:#fff;transition:.3s}
+.nav__mobile{display:none;flex-direction:column;background:var(--navy-dark);border-top:1px solid rgba(255,255,255,.08);padding:16px 24px;gap:2px}
+.nav__mobile.open{display:flex}
+.nav__mobile a{padding:12px 0;font-size:.88rem;font-weight:700;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07);text-transform:uppercase;letter-spacing:.05em}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:var(--radius);font-weight:800;font-size:.8rem;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:all .22s;cursor:pointer;border:2px solid transparent;font-family:"Montserrat",sans-serif}
+.btn--red{background:var(--red);color:#fff;border-color:var(--red)}
+.btn--red:hover{background:var(--red-dark);border-color:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(204,31,31,.35)}
+.btn--yellow{background:var(--yellow);color:var(--navy-dark);border-color:var(--yellow)}
+.btn--yellow:hover{background:var(--yellow-dark);border-color:var(--yellow-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,216,71,.3)}
+.btn--navy{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn--navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+.btn--outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn--outline-white:hover{border-color:#fff;background:rgba(255,255,255,.09)}
+.btn--outline-navy{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn--outline-navy:hover{background:var(--navy);color:#fff}
+/* HERO */
+.hero{min-height:100vh;padding-top:68px;background:var(--navy-dark);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 80% 50%,rgba(27,43,107,.5) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 5% 80%,rgba(204,31,31,.12) 0%,transparent 50%)}
+.hero::after{content:"";position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;border:60px solid rgba(245,216,71,.05)}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero__eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(245,216,71,.1);border:1px solid rgba(245,216,71,.28);padding:7px 18px;border-radius:100px;margin-bottom:28px;font-size:.7rem;font-weight:800;color:var(--yellow);letter-spacing:.14em;text-transform:uppercase;animation:fadeUp .7s ease both}
+.hero__dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.4)}}
+.hero h1{color:#fff;margin-bottom:22px;animation:fadeUp .7s .1s ease both}
+.hero h1 span{color:var(--yellow)}
+.hero__sub{color:rgba(255,255,255,.72);font-size:.98rem;max-width:500px;margin-bottom:36px;animation:fadeUp .7s .2s ease both}
+.hero__ctas{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero__visual{animation:fadeUp .7s .4s ease both}
+.hero__card{background:rgba(255,255,255,.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-xl);padding:36px;text-align:center;position:relative}
+.hero__card img{width:180px;margin-bottom:28px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.4))}
+.hero__card-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hero__stat{background:rgba(255,255,255,.07);border-radius:10px;padding:16px 10px;border:1px solid rgba(255,255,255,.1)}
+.hero__stat strong{display:block;font-family:"Lora",serif;font-size:1.8rem;color:var(--yellow);font-weight:700;line-height:1}
+.hero__stat span{font-size:.66rem;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;display:block}
+.hero__badge{position:absolute;top:-16px;right:-18px;background:var(--red);color:#fff;border-radius:12px;padding:12px 16px;box-shadow:0 8px 24px rgba(204,31,31,.4);border:3px solid rgba(255,255,255,.15)}
+.hero__badge strong{display:block;font-size:.95rem;font-weight:800}
+.hero__badge span{font-size:.68rem;font-weight:600;opacity:.85}
+/* TRUST BAR */
+.trust-bar{background:var(--yellow);border-top:3px solid var(--yellow-dark);border-bottom:3px solid var(--yellow-dark)}
+.trust-bar__inner{display:flex;justify-content:center;overflow-x:auto}
+.trust-item{display:flex;align-items:center;gap:10px;padding:16px 30px;border-right:2px solid rgba(27,43,107,.14);white-space:nowrap;flex-shrink:0}
+.trust-item:last-child{border-right:none}
+.trust-item__icon{width:32px;height:32px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item__icon svg{fill:var(--yellow);width:17px;height:17px}
+.trust-item strong{display:block;font-size:.78rem;font-weight:800;color:var(--navy-dark)}
+.trust-item span{font-size:.68rem;font-weight:600;color:var(--navy);opacity:.7}
+/* LABELS */
+.label{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px;display:block}
+.rule{width:44px;height:4px;background:var(--red);border-radius:2px;margin:16px 0}
+.rule--c{margin:16px auto}
+.rule--y{background:var(--yellow)}
+.text-center{text-align:center}
+.text-center .sub{margin:0 auto}
+.sub{font-size:1rem;color:var(--text-mid);max-width:560px;line-height:1.75}
+/* OVERVIEW */
+.overview{background:var(--off-white)}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.ov-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.stat-box{background:#fff;padding:22px;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border-top:4px solid var(--red);transition:transform .3s,box-shadow .3s}
+.stat-box:nth-child(2){border-top-color:var(--navy)}
+.stat-box:nth-child(3){border-top-color:var(--yellow-dark)}
+.stat-box:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.stat-box strong{display:block;font-family:"Lora",serif;font-size:2.1rem;font-weight:700;color:var(--navy-dark)}
+.stat-box span{font-size:.72rem;font-weight:700;color:var(--text-light);letter-spacing:.06em;text-transform:uppercase;margin-top:4px;display:block}
+.ov-visual{background:var(--navy-dark);border-radius:var(--radius-xl);padding:44px 36px;position:relative;overflow:hidden}
+.ov-visual::before{content:"";position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(245,216,71,.1)}
+.ov-visual::after{content:"";position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;border-radius:50%;border:2px solid rgba(204,31,31,.12)}
+.ov-visual img{width:130px;margin-bottom:20px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.35));position:relative;z-index:1}
+.ov-visual h3{color:#fff;font-size:1.3rem;margin-bottom:8px;position:relative;z-index:1}
+.ov-visual p{color:rgba(255,255,255,.6);font-size:.82rem;margin-bottom:24px;position:relative;z-index:1}
+.ov-badges{display:flex;flex-wrap:wrap;gap:9px;position:relative;z-index:1}
+.ov-badge{background:rgba(245,216,71,.1);border:1px solid rgba(245,216,71,.22);padding:7px 15px;border-radius:100px;font-size:.72rem;font-weight:700;color:var(--yellow);letter-spacing:.06em}
+/* PRODUCTS */
+.products__tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.tab-btn{padding:9px 20px;border-radius:100px;border:2px solid var(--border);background:#fff;font-weight:700;font-size:.76rem;cursor:pointer;transition:all .22s;color:var(--text-mid);letter-spacing:.04em;text-transform:uppercase;font-family:"Montserrat",sans-serif}
+.tab-btn.active{border-color:var(--navy);background:var(--navy);color:#fff}
+.tab-btn:hover:not(.active){border-color:var(--navy);color:var(--navy)}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:22px}
+.pc{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.pc__bar{height:7px}
+.pc__bar--r{background:var(--red)}
+.pc__bar--n{background:var(--navy)}
+.pc__bar--y{background:var(--yellow-dark)}
+.pc__head{padding:18px 20px 12px;display:flex;gap:13px;align-items:flex-start}
+.pc__ico{width:46px;height:46px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.pc__ico--r{background:#FEF0F0}
+.pc__ico--r svg{fill:var(--red)}
+.pc__ico--n{background:var(--light-blue)}
+.pc__ico--n svg{fill:var(--navy)}
+.pc__ico--y{background:#FFFBE6}
+.pc__ico--y svg{fill:var(--yellow-dark)}
+.pc__ico svg{width:22px;height:22px}
+.pc__name{font-family:"Lora",serif;font-size:1.05rem;font-weight:700;color:var(--navy-dark)}
+.pc__cat{font-size:.68rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.pc__body{padding:2px 20px 14px;flex:1}
+.pc__desc{font-size:.85rem;color:var(--text-mid);line-height:1.65;margin-bottom:12px}
+.pc__sizes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.sz{background:var(--light-blue);color:var(--navy);padding:3px 10px;border-radius:100px;font-size:.7rem;font-weight:700}
+.pc__target{font-size:.7rem;font-weight:700;color:var(--text-light);letter-spacing:.03em}
+.pc__foot{padding:10px 20px 18px}
+.btn--pc{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;background:var(--navy-dark);color:#fff;border-radius:var(--radius);text-decoration:none;border:2px solid var(--navy-dark);transition:all .22s;font-family:"Montserrat",sans-serif}
+.btn--pc:hover{background:var(--red);border-color:var(--red)}
+.ptc{display:none}
+.ptc.active{display:block;animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.bulk-note{text-align:center;margin-top:36px;padding:26px;background:var(--light-blue);border-radius:var(--radius-lg);border:1.5px solid var(--border)}
+.bulk-note p{font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:14px}
+.bulk-note .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* ANIMALS */
+.animals{background:var(--navy-dark);position:relative;overflow:hidden}
+.animals::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 0,transparent 50%);background-size:30px 30px}
+.animals__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
+.an-card{border-radius:var(--radius-xl);padding:36px 26px;text-align:center;transition:transform .3s;border:2px solid transparent}
+.an-card--r{background:linear-gradient(145deg,rgba(204,31,31,.13),rgba(204,31,31,.05));border-color:rgba(204,31,31,.22)}
+.an-card--y{background:linear-gradient(145deg,rgba(245,216,71,.1),rgba(245,216,71,.03));border-color:rgba(245,216,71,.18)}
+.an-card--b{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+.an-card:hover{transform:translateY(-6px)}
+.an-ico{width:68px;height:68px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.an-card--r .an-ico{background:rgba(204,31,31,.18)}
+.an-card--y .an-ico{background:rgba(245,216,71,.12)}
+.an-card--b .an-ico{background:rgba(255,255,255,.09)}
+.an-ico svg{width:34px;height:34px;fill:#fff}
+.an-card h3{color:#fff;margin-bottom:10px;font-size:1.25rem}
+.an-card p{color:rgba(255,255,255,.63);font-size:.86rem;line-height:1.7}
+.an-pill{display:inline-block;margin-top:16px;padding:5px 14px;border-radius:100px;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.an-card--r .an-pill{background:rgba(204,31,31,.22);color:#ff8080}
+.an-card--y .an-pill{background:rgba(245,216,71,.13);color:var(--yellow)}
+.an-card--b .an-pill{background:rgba(255,255,255,.09);color:rgba(255,255,255,.65)}
+/* WHY */
+.why{background:var(--off-white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.feat-list{display:flex;flex-direction:column;gap:18px}
+.feat{display:flex;gap:16px;padding:18px;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s}
+.feat:hover{transform:translateX(6px);box-shadow:var(--shadow-md)}
+.feat__ico{width:42px;height:42px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.feat__ico--r{background:#FEF0F0}
+.feat__ico--r svg{stroke:var(--red)}
+.feat__ico--n{background:var(--light-blue)}
+.feat__ico--n svg{stroke:var(--navy)}
+.feat__ico--y{background:#FFFBE6}
+.feat__ico--y svg{stroke:var(--yellow-dark)}
+.feat__ico svg{width:20px;height:20px;fill:none;stroke-width:2}
+.feat h4{margin-bottom:4px;color:var(--navy-dark);font-size:.95rem}
+.feat p{font-size:.85rem}
+.why-visual{background:var(--navy);border-radius:var(--radius-xl);padding:44px;text-align:center;position:relative;overflow:hidden}
+.why-visual::after{content:"";position:absolute;bottom:-50px;right:-50px;width:180px;height:180px;border-radius:50%;border:35px solid rgba(245,216,71,.07)}
+.why-visual img{width:150px;margin-bottom:24px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));position:relative;z-index:1}
+.why-visual h3{color:#fff;font-size:1.4rem;margin-bottom:14px;position:relative;z-index:1}
+.why-visual>p{color:rgba(255,255,255,.68);font-size:.86rem;max-width:280px;margin:0 auto 26px;position:relative;z-index:1}
+.why-nums{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
+.why-num{background:rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center;border:1px solid rgba(255,255,255,.1)}
+.why-num strong{display:block;font-family:"Lora",serif;font-size:1.8rem;color:var(--yellow);font-weight:700}
+.why-num span{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase}
+/* DIST */
+.dist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dc{border-radius:var(--radius-lg);padding:30px 26px;transition:transform .3s,box-shadow .3s}
+.dc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.dc--r{background:var(--red)}
+.dc--n{background:var(--navy)}
+.dc--y{background:var(--yellow)}
+.dc__ico{width:50px;height:50px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.dc--r .dc__ico,.dc--n .dc__ico{background:rgba(255,255,255,.14)}
+.dc--y .dc__ico{background:rgba(27,43,107,.13)}
+.dc__ico svg{width:24px;height:24px}
+.dc--r .dc__ico svg,.dc--n .dc__ico svg{fill:#fff}
+.dc--y .dc__ico svg{fill:var(--navy-dark)}
+.dc h3{font-size:1.15rem;margin-bottom:10px}
+.dc--r h3,.dc--n h3{color:#fff}
+.dc--y h3{color:var(--navy-dark)}
+.dc p{font-size:.85rem}
+.dc--r p,.dc--n p{color:rgba(255,255,255,.72)}
+.dc--y p{color:var(--navy);opacity:.8}
+/* QUALITY */
+.qual-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.qi{display:flex;gap:16px;padding:22px;background:#fff;border-radius:var(--radius-lg);border-left:4px solid var(--navy);box-shadow:var(--shadow-sm)}
+.qi:nth-child(even){border-left-color:var(--red)}
+.qi__ico{width:38px;height:38px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--navy)}
+.qi:nth-child(even) .qi__ico{background:var(--red)}
+.qi__ico svg{width:18px;height:18px;fill:#fff}
+.qi h4{color:var(--navy-dark);margin-bottom:5px;font-size:.95rem}
+.qi p{font-size:.83rem}
+/* TESTIMONIALS */
+.testi{background:var(--navy-dark);position:relative;overflow:hidden}
+.testi::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(245,216,71,.03) 0%,transparent 70%)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1}
+.tc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-xl);padding:30px;position:relative;transition:background .3s,transform .3s}
+.tc:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.tc::before{content:'\201C';position:absolute;top:14px;right:22px;font-size:5rem;color:rgba(245,216,71,.13);font-family:"Lora",serif;line-height:1}
+.tc__text{font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.78);margin-bottom:22px;font-style:italic}
+.tc__author{display:flex;gap:13px;align-items:center}
+.tc__av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.88rem;flex-shrink:0}
+.tc__name{font-weight:700;color:#fff;font-size:.86rem}
+.tc__role{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:2px}
+.stars{display:flex;gap:2px;margin-bottom:12px}
+.star{width:13px;height:13px;fill:var(--yellow)}
+/* EXPORTS */
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.ex-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin:26px 0}
+.ex-list li{display:flex;gap:13px;align-items:flex-start}
+.ex-chk{width:24px;height:24px;background:var(--navy);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.ex-chk svg{width:13px;height:13px;stroke:var(--yellow);fill:none;stroke-width:2.5}
+.ex-list strong{display:block;font-weight:700;color:var(--navy-dark);font-size:.9rem}
+.ex-list span{font-size:.8rem;color:var(--text-mid);margin-top:2px;display:block}
+.ex-visual{background:var(--navy);border-radius:var(--radius-xl);padding:40px 34px;position:relative;overflow:hidden}
+.ex-visual::before{content:"";position:absolute;top:-50px;right:-50px;width:180px;height:180px;border-radius:50%;background:rgba(204,31,31,.1)}
+.ex-visual h3{color:#fff;margin-bottom:10px;font-size:1.4rem;position:relative;z-index:1}
+.ex-visual>p{color:rgba(255,255,255,.68);font-size:.86rem;margin-bottom:26px;position:relative;z-index:1}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;position:relative;z-index:1}
+.reg{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:9px;padding:13px 15px}
+.reg strong{display:block;color:var(--yellow);font-size:.86rem;font-weight:800}
+.reg span{display:block;font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;font-weight:600}
+.open-for{margin-top:22px;padding:18px;background:rgba(245,216,71,.07);border:1px solid rgba(245,216,71,.18);border-radius:9px;position:relative;z-index:1}
+.open-for p{color:rgba(255,255,255,.5);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}
+.of-tags{display:flex;flex-wrap:wrap;gap:7px}
+.of-tag{background:rgba(255,255,255,.09);padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.78)}
+/* ABOUT */
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.ms-list{margin-top:32px;position:relative}
+.ms-list::before{content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;background:var(--border)}
+.ms{display:flex;gap:18px;margin-bottom:26px;position:relative}
+.ms__dot{width:34px;height:34px;border-radius:50%;background:var(--navy);flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;border:3px solid #fff;box-shadow:var(--shadow-sm)}
+.ms:nth-child(even) .ms__dot{background:var(--red)}
+.ms__dot svg{width:15px;height:15px;fill:#fff}
+.ms__yr{font-size:.68rem;font-weight:800;color:var(--red);letter-spacing:.1em;text-transform:uppercase}
+.ms__txt{font-size:.85rem;color:var(--text-mid);margin-top:4px}
+.val-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.vi{padding:18px;border-radius:var(--radius-lg)}
+.vi--n{background:var(--light-blue);border-left:3px solid var(--navy)}
+.vi--r{background:#FEF0F0;border-left:3px solid var(--red)}
+.vi--y{background:#FFFBE6;border-left:3px solid var(--yellow-dark)}
+.vi h4{color:var(--navy-dark);margin-bottom:5px;font-size:.9rem}
+.vi p{font-size:.8rem}
+/* INSIGHTS */
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ic{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);transition:transform .3s,box-shadow .3s}
+.ic:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.ic__thumb{height:150px;display:flex;align-items:center;justify-content:center}
+.ic__thumb svg{width:44px;height:44px;fill:rgba(255,255,255,.28)}
+.ic__body{padding:20px}
+.ic__tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--red);margin-bottom:8px}
+.ic h4{color:var(--navy-dark);font-size:.92rem;line-height:1.45;margin-bottom:9px}
+.ic__meta{font-size:.72rem;color:var(--text-light);font-weight:600}
+/* CTA BAND */
+.cta-band{background:var(--red);padding:78px 0;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;top:-80px;left:-80px;width:280px;height:280px;border-radius:50%;background:rgba(0,0,0,.08)}
+.cta-band::after{content:"";position:absolute;bottom:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(0,0,0,.06)}
+.cta-band__inner{position:relative;z-index:1;text-align:center}
+.cta-band h2{color:#fff;margin-bottom:14px}
+.cta-band p{color:rgba(255,255,255,.84);max-width:530px;margin:0 auto 34px;font-size:.98rem}
+.cta-band .btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+/* CONTACT */
+.con-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:56px}
+.cin{display:flex;flex-direction:column;gap:18px}
+.cin-item{display:flex;gap:15px;padding:18px;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+.cin-item__ico{width:42px;height:42px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.cin-item__ico svg{width:19px;height:19px}
+.cin-item h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);font-weight:800;margin-bottom:4px}
+.cin-item a,.cin-item p{color:var(--navy-dark);font-weight:600;font-size:.9rem;text-decoration:none}
+.cin-item a:hover{color:var(--red)}
+.con-form{background:#fff;padding:40px;border-radius:var(--radius-xl);box-shadow:var(--shadow-md);border-top:4px solid var(--navy)}
+.con-form h3{font-size:1.45rem;margin-bottom:5px;color:var(--navy-dark)}
+.con-form>p{font-size:.85rem;color:var(--text-mid);margin-bottom:26px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:.74rem;font-weight:800;color:var(--navy-dark);margin-bottom:6px;letter-spacing:.06em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:var(--radius);font-family:"Montserrat",sans-serif;font-size:.86rem;color:var(--navy-dark);outline:none;background:var(--off-white);transition:border-color .22s,box-shadow .22s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(27,43,107,.09)}
+.fg textarea{resize:vertical;min-height:108px}
+/* FOOTER */
+.footer{background:var(--navy-dark)}
+.footer__main{padding:64px 0 40px}
+.fg-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+.fb img{height:46px;margin-bottom:14px;filter:brightness(1.1)}
+.fb p{font-size:.81rem;color:rgba(255,255,255,.52);line-height:1.75;max-width:250px}
+.fb address{font-size:.8rem;color:rgba(255,255,255,.48);font-style:normal;margin-top:10px;line-height:1.65}
+.fb .tel{color:var(--yellow);font-weight:700;font-size:.9rem;text-decoration:none;display:block;margin-top:7px}
+.fc h5{color:#fff;font-family:"Montserrat",sans-serif;font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;padding-bottom:9px;border-bottom:2px solid rgba(255,255,255,.07)}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul a{color:rgba(255,255,255,.52);text-decoration:none;font-size:.82rem;font-weight:600;transition:color .2s}
+.fc ul a:hover{color:var(--yellow)}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.06);padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer__bottom p{font-size:.76rem;color:rgba(255,255,255,.32)}
+.footer__certs{display:flex;gap:8px}
+.cert{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:5px 12px;border-radius:4px;font-size:.66rem;font-weight:800;color:rgba(255,255,255,.42);letter-spacing:.07em;text-transform:uppercase}
+/* WA FLOAT */
+.wa{position:fixed;bottom:26px;right:26px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,.44);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .3s;animation:wab 3s ease infinite 3s}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:28px;height:28px;fill:#fff}
+@keyframes wab{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .ov-grid,.why-grid,.ex-grid,.ab-grid,.con-grid{grid-template-columns:1fr;gap:40px}
+  .hero__grid{grid-template-columns:1fr}
+  .hero__visual{display:none}
+  .fg-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .animals__grid,.testi-grid,.ins-grid{grid-template-columns:1fr 1fr}
+  .dist-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav__links,.nav__cta{display:none}
+  .nav__hamburger{display:flex}
+  .section{padding:60px 0}
+  .hero{min-height:auto;padding:108px 0 52px}
+  .animals__grid,.testi-grid,.ins-grid,.dist-grid,.qual-grid{grid-template-columns:1fr}
+  .fg-grid{grid-template-columns:1fr}
+  .pg{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+  .trust-bar__inner{justify-content:flex-start}
+  .reg-grid,.val-grid{grid-template-columns:1fr}
+  .cta-band .btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<!-- WA FLOAT -->
+<a href="https://wa.me/2348037276090" target="_blank" class="wa" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo"><img src="logo.png" alt="Haybee Agrosciences Enterprises"></a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#quality">Quality</a></li>
+        <li><a href="#exports">Exports</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/2348037276090" target="_blank" class="nav__cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h12v-2H7.42l.9-1.75H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.47 4H5.21L4.27 2H1z"/></svg>
+        Order Now
+      </a>
+      <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#products" onclick="closeMobile()">Products</a>
+    <a href="#quality" onclick="closeMobile()">Quality</a>
+    <a href="#exports" onclick="closeMobile()">Exports</a>
+    <a href="#insights" onclick="closeMobile()">Insights</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="https://wa.me/2348037276090" target="_blank" style="color:var(--yellow)">Order Products</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <div class="hero__eyebrow"><span class="hero__dot"></span>Nigerian Veterinary Pharmaceutical Manufacturer</div>
+        <h1>Trusted Animal Health Solutions <span>For Over 30 Years</span></h1>
+        <p class="hero__sub">Manufacturing and supplying veterinary pharmaceuticals, antibiotics, multivitamins, and livestock health products trusted by farmers, vets, and distributors across Nigeria and beyond.</p>
+        <div class="hero__ctas">
+          <a href="https://wa.me/2348037276090" target="_blank" class="btn btn--yellow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h12v-2H7.42l.9-1.75H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.47 4H5.21L4.27 2H1z"/></svg>
+            Order Products
+          </a>
+          <a href="#contact" class="btn btn--outline-white">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            Become a Distributor
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__card">
+          <img src="logo.png" alt="Haybee Agrosciences">
+          <div style="color:rgba(255,255,255,.55);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px">Our Track Record</div>
+          <div class="hero__card-stats">
+            <div class="hero__stat"><strong>30+</strong><span>Years Mfg.</span></div>
+            <div class="hero__stat"><strong>20+</strong><span>Products</span></div>
+            <div class="hero__stat"><strong>36</strong><span>States</span></div>
+          </div>
+          <div class="hero__badge"><strong>Export Ready</strong><span>Regional Markets</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container"><div class="trust-bar__inner">
+    <div class="trust-item"><div class="trust-item__icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><div><strong>30+ Years Experience</strong><span>Proven Track Record</span></div></div>
+    <div class="trust-item"><div class="trust-item__icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><strong>NAFDAC Registered</strong><span>Certified Manufacturer</span></div></div>
+    <div class="trust-item"><div class="trust-item__icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><strong>Nationwide Distribution</strong><span>All 36 States</span></div></div>
+    <div class="trust-item"><div class="trust-item__icon"><svg viewBox="0 0 24 24"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg></div><div><strong>Export Ready</strong><span>Regional Markets</span></div></div>
+    <div class="trust-item"><div class="trust-item__icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div><strong>Trusted Partners</strong><span>Retailers &amp; Wholesalers</span></div></div>
+  </div></div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="overview section" id="overview">
+  <div class="container"><div class="ov-grid">
+    <div class="reveal">
+      <span class="label">Company Overview</span>
+      <h2 style="color:var(--navy-dark)">Africa's Trusted Name in Animal Health Manufacturing</h2>
+      <div class="rule"></div>
+      <p>Haybee Agrosciences Enterprises has been at the forefront of veterinary pharmaceutical manufacturing in Nigeria for over three decades. From our facility at 278 Ijegun Road, Lagos, we manufacture a comprehensive range of animal health solutions trusted by poultry farmers, aquaculture producers, livestock operators, and wholesale distributors nationwide.</p>
+      <p style="margin-top:13px">Our deep market penetration, established distribution channels, and commitment to product quality have made Haybee a household name in Nigerian animal agriculture — and a growing presence in regional African markets.</p>
+      <div class="ov-stats">
+        <div class="stat-box"><strong>30+</strong><span>Years Manufacturing</span></div>
+        <div class="stat-box"><strong>20+</strong><span>Registered Products</span></div>
+        <div class="stat-box"><strong>36</strong><span>States Covered</span></div>
+        <div class="stat-box"><strong>3+</strong><span>Export Markets</span></div>
+      </div>
+    </div>
+    <div class="ov-visual reveal">
+      <img src="logo.png" alt="Haybee Agrosciences">
+      <h3>Haybee Manufacturing Facility</h3>
+      <p>278 Ijegun Road, Near Ilori Bus-Stop, Lagos — Nigeria</p>
+      <div class="ov-badges">
+        <span class="ov-badge">GMP Compliant</span>
+        <span class="ov-badge">NAFDAC Registered</span>
+        <span class="ov-badge">Quality Tested</span>
+        <span class="ov-badge">Export Ready</span>
+      </div>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);position:relative;z-index:1">
+        <a href="https://wa.me/2348037276090?text=Please send me your complete product catalogue" target="_blank" class="btn btn--yellow" style="width:100%;justify-content:center;font-size:.76rem">Request Full Product Catalogue</a>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products" style="background:#fff">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="label">Product Portfolio</span>
+      <h2 style="color:var(--navy-dark)">Veterinary Pharmaceuticals &amp; Animal Health Products</h2>
+      <div class="rule rule--c"></div>
+      <p class="sub">Our complete range of registered veterinary medicines, antibiotics, nutritional supplements, and animal health products — formulated for Nigerian and African farming conditions.</p>
+    </div>
+    <div style="margin-top:40px">
+      <div class="products__tabs reveal">
+        <button class="tab-btn active" onclick="switchTab('all',this)">All Products</button>
+        <button class="tab-btn" onclick="switchTab('anti',this)">Antibiotics</button>
+        <button class="tab-btn" onclick="switchTab('vit',this)">Vitamins &amp; Minerals</button>
+        <button class="tab-btn" onclick="switchTab('aqua',this)">Aquaculture</button>
+        <button class="tab-btn" onclick="switchTab('pest',this)">Pest Control</button>
+        <button class="tab-btn" onclick="switchTab('other',this)">Other Products</button>
+      </div>
+      <div class="ptc active" id="tab-all">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg></div><div><div class="pc__name">Corymed-20</div><div class="pc__cat">Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Broad-spectrum antibiotic for CRD, respiratory infections and bacterial diseases in poultry and livestock. High-efficacy 20% active ingredient formulation.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,500</span><span class="sz">50g — &#8358;1,800</span></div><div class="pc__target">Target: Poultry &bull; Livestock &bull; Turkeys</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Corymed-20" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div><div><div class="pc__name">Ampidox</div><div class="pc__cat">Combination Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Ampicillin + Doxycycline for mixed bacterial infections, respiratory diseases and enteritis in poultry and livestock operations.</p><div class="pc__sizes"><span class="sz">100g — &#8358;2,000</span><span class="sz">50g — &#8358;1,000</span></div><div class="pc__target">Target: Poultry &bull; Pigs &bull; Livestock</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Ampidox" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div><div><div class="pc__name">Hayflox-20</div><div class="pc__cat">Fluoroquinolone Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Enrofloxacin for E. coli, salmonellosis and mycoplasmosis. Highly bioavailable powder for broilers, layers and rabbits.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,600</span><span class="sz">50g — &#8358;900</span></div><div class="pc__target">Target: Broilers &bull; Layers &bull; Rabbits</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Hayflox-20" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar" style="height:7px;background:linear-gradient(90deg,#006994,#00ACC1)"></div><div class="pc__head"><div class="pc__ico" style="background:#E6F7FC"><svg viewBox="0 0 24 24" style="fill:#006994;width:22px;height:22px"><path d="M20 12c0-1.1-.55-2.08-1.39-2.67C18.87 8.87 19 8.45 19 8c0-1.66-1.34-3-3-3-.75 0-1.42.29-1.93.76C13.67 5.3 13 5 12.25 5c-.87 0-1.64.44-2.09 1.11C9.74 6.04 9.39 6 9 6 7.34 6 6 7.34 6 9c0 .45.13.87.39 1.33C5.55 10.92 5 11.9 5 13c0 1.86 1.51 3.37 3.37 3.37h8.26C18.49 16.37 20 14.86 20 13v-1z"/></svg></div><div><div class="pc__name">Fishmycin</div><div class="pc__cat" style="color:#006994">Aquaculture Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Oxytetracycline-based antibiotic for catfish, tilapia and other cultured fish. Treats bacterial diseases, ulcers and fin rot in Nigerian aquaculture ponds.</p><div class="pc__sizes"><span class="sz">100g — &#8358;2,000</span></div><div class="pc__target">Target: Catfish &bull; Tilapia &bull; Shrimp &bull; Prawns</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Fishmycin" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="pc__name">Haybee Tylodox</div><div class="pc__cat">Combination Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Tylosin + Doxycycline for mycoplasmosis, CRD and complex respiratory infections. Proven efficacy under Nigerian farm conditions.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,200</span><span class="sz">50g — &#8358;1,700</span></div><div class="pc__target">Target: Broilers &bull; Layers &bull; Turkeys</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Haybee Tylodox" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.65 11.65L7.35 7.35c.63-.68 1.41-1.22 2.29-1.54L17.19 13.36c-.32.88-.86 1.66-1.54 2.29z"/></svg></div><div><div class="pc__name">Quinocox</div><div class="pc__cat">Anticoccidial</div></div></div><div class="pc__body"><p class="pc__desc">Quinolone-based anticoccidial for prevention and treatment of coccidiosis. Highly effective against multiple Eimeria species in poultry flocks.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,000</span><span class="sz">30g — &#8358;1,000</span></div><div class="pc__target">Target: Broilers &bull; Layers &bull; Chicks</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Quinocox" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--y"></div><div class="pc__head"><div class="pc__ico pc__ico--y"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95z"/></svg></div><div><div class="pc__name">Vital Power</div><div class="pc__cat">Multivitamin Complex</div></div></div><div class="pc__body"><p class="pc__desc">Premium multi-vitamin and mineral supplement supporting immune function, growth performance and feed conversion efficiency in all livestock species.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span><span class="sz">50g — &#8358;700</span></div><div class="pc__target">Target: All Livestock &amp; Poultry Species</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Vital Power" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6z"/></svg></div><div><div class="pc__name">Calcimax-R</div><div class="pc__cat">Calcium Supplement</div></div></div><div class="pc__body"><p class="pc__desc">Concentrated calcium for layers and breeders. Improves eggshell quality, prevents calcium deficiency and supports skeletal health.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,200</span></div><div class="pc__target">Target: Layers &bull; Breeders &bull; Poultry</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Calcimax-R" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div><div class="pc__name">Coccimed</div><div class="pc__cat">Anticoccidial</div></div></div><div class="pc__body"><p class="pc__desc">Sulphonamide-based coccidiostat for prevention and treatment of coccidiosis. Cost-effective solution trusted by poultry farmers across Nigeria.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,500</span><span class="sz">30g — &#8358;750</span></div><div class="pc__target">Target: Broilers &bull; Layers &bull; Chicks</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=I want to order Coccimed" target="_blank" class="btn--pc">Order Now / Enquire</a></div></div>
+        </div>
+        <div class="bulk-note reveal">
+          <p>Contact Sales for Distributor Pricing and Bulk Orders. Full catalogue includes Xtraceryl, Pox Remedy, Trisulf-240, Maxi-Egg, Snake Off, Daizinol, Piperazine Citrate &amp; Chick Starter.</p>
+          <div class="btns">
+            <a href="https://wa.me/2348037276090?text=Please send complete product catalogue and distributor pricing" target="_blank" class="btn btn--navy">Request Full Catalogue</a>
+            <a href="https://wa.me/2348037276090?text=I want bulk order pricing" target="_blank" class="btn btn--outline-navy">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+      <div class="ptc" id="tab-anti">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg></div><div><div class="pc__name">Corymed-20</div><div class="pc__cat">Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Broad-spectrum antibiotic for CRD and respiratory infections in poultry and livestock.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,500</span><span class="sz">50g — &#8358;1,800</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Corymed-20" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div><div><div class="pc__name">Ampidox</div><div class="pc__cat">Combination Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Ampicillin + Doxycycline for mixed bacterial infections and respiratory diseases.</p><div class="pc__sizes"><span class="sz">100g — &#8358;2,000</span><span class="sz">50g — &#8358;1,000</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Ampidox" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div><div><div class="pc__name">Hayflox-20</div><div class="pc__cat">Fluoroquinolone</div></div></div><div class="pc__body"><p class="pc__desc">Enrofloxacin for E. coli, salmonellosis and mycoplasmosis.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,600</span><span class="sz">50g — &#8358;900</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Hayflox-20" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="pc__name">Haybee Tylodox</div><div class="pc__cat">Combination Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Tylosin + Doxycycline for mycoplasmosis and complex respiratory infections.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,200</span><span class="sz">50g — &#8358;1,700</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Haybee Tylodox" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"/></svg></div><div><div class="pc__name">Xtraceryl</div><div class="pc__cat">Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Effective antibiotic for a broad range of bacterial infections in poultry and livestock.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span><span class="sz">50g — &#8358;800</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Xtraceryl" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div><div><div class="pc__name">Pox Remedy</div><div class="pc__cat">Antiviral Support</div></div></div><div class="pc__body"><p class="pc__desc">Supportive treatment for pox infections and secondary bacterial complications.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,200</span><span class="sz">50g — &#8358;700</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Pox Remedy" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.81.5 13.16.5z"/></svg></div><div><div class="pc__name">Trisulf-240</div><div class="pc__cat">Sulphonamide Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Triple sulphonamide for salmonellosis, coccidiosis and enteric infections.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,500</span><span class="sz">50g — &#8358;700</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Trisulf-240" target="_blank" class="btn--pc">Order Now</a></div></div>
+        </div>
+        <div class="bulk-note" style="margin-top:28px"><p>Contact Sales for Distributor Pricing and Bulk Orders</p><div class="btns"><a href="https://wa.me/2348037276090" target="_blank" class="btn btn--red">Contact Sales</a></div></div>
+      </div>
+      <div class="ptc" id="tab-vit">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar pc__bar--y"></div><div class="pc__head"><div class="pc__ico pc__ico--y"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28z"/></svg></div><div><div class="pc__name">Vital Power</div><div class="pc__cat">Multivitamin Complex</div></div></div><div class="pc__body"><p class="pc__desc">Premium multi-vitamin and mineral supplement for optimal performance, immunity and productivity in all livestock.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span><span class="sz">50g — &#8358;700</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Vital Power" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg></div><div><div class="pc__name">Calcimax-R</div><div class="pc__cat">Calcium Supplement</div></div></div><div class="pc__body"><p class="pc__desc">Concentrated calcium for layers and breeders. Improves eggshell quality and prevents calcium deficiency.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,200</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Calcimax-R" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--y"></div><div class="pc__head"><div class="pc__ico pc__ico--y"><svg viewBox="0 0 24 24"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2z"/></svg></div><div><div class="pc__name">Maxi-Egg</div><div class="pc__cat">Egg Production Supplement</div></div></div><div class="pc__body"><p class="pc__desc">Boosts egg production rates, improves egg quality and extends laying cycles in commercial layer operations.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Maxi-Egg" target="_blank" class="btn--pc">Order Now</a></div></div>
+        </div>
+        <div class="bulk-note" style="margin-top:28px"><p>Contact Sales for Distributor Pricing and Bulk Orders</p><div class="btns"><a href="https://wa.me/2348037276090" target="_blank" class="btn btn--navy">Contact Sales</a></div></div>
+      </div>
+      <div class="ptc" id="tab-aqua">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar" style="height:7px;background:linear-gradient(90deg,#006994,#00ACC1)"></div><div class="pc__head"><div class="pc__ico" style="background:#E6F7FC"><svg viewBox="0 0 24 24" style="fill:#006994;width:22px;height:22px"><path d="M20 12c0-1.1-.55-2.08-1.39-2.67C18.87 8.87 19 8.45 19 8c0-1.66-1.34-3-3-3-.75 0-1.42.29-1.93.76C13.67 5.3 13 5 12.25 5c-.87 0-1.64.44-2.09 1.11C9.74 6.04 9.39 6 9 6 7.34 6 6 7.34 6 9c0 .45.13.87.39 1.33C5.55 10.92 5 11.9 5 13c0 1.86 1.51 3.37 3.37 3.37h8.26C18.49 16.37 20 14.86 20 13v-1z"/></svg></div><div><div class="pc__name">Fishmycin</div><div class="pc__cat" style="color:#006994">Fish Antibiotic</div></div></div><div class="pc__body"><p class="pc__desc">Oxytetracycline-based antibiotic for catfish, tilapia and other cultured fish. Treats bacterial diseases, ulcers and fin rot in aquaculture ponds.</p><div class="pc__sizes"><span class="sz">100g — &#8358;2,000</span></div><div class="pc__target">Target: Catfish &bull; Tilapia &bull; Shrimp &bull; Prawns</div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Fishmycin for aquaculture" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--y"></div><div class="pc__head"><div class="pc__ico pc__ico--y"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></div><div><div class="pc__name">Chick Starter</div><div class="pc__cat">Early Growth Supplement</div></div></div><div class="pc__body"><p class="pc__desc">For day-old chicks and fish fingerlings. Supports early immune development, growth rates and reduces mortality in the critical first weeks.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span><span class="sz">50g — &#8358;800</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Chick Starter" target="_blank" class="btn--pc">Order Now</a></div></div>
+        </div>
+        <div class="bulk-note" style="margin-top:28px"><p>Contact Sales for Distributor Pricing and Bulk Orders on Aquaculture Products</p><div class="btns"><a href="https://wa.me/2348037276090?text=I need aquaculture health products" target="_blank" class="btn btn--navy">Speak to Aquaculture Specialist</a></div></div>
+      </div>
+      <div class="ptc" id="tab-pest">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.65 11.65L7.35 7.35c.63-.68 1.41-1.22 2.29-1.54L17.19 13.36c-.32.88-.86 1.66-1.54 2.29z"/></svg></div><div><div class="pc__name">Snake Off</div><div class="pc__cat">Reptile Repellent</div></div></div><div class="pc__body"><p class="pc__desc">Effective snake repellent for farm premises, animal houses and storage areas. Protects livestock and staff without harmful chemicals.</p><div class="pc__sizes"><span class="sz">100g — &#8358;3,000</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Snake Off" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--r"></div><div class="pc__head"><div class="pc__ico pc__ico--r"><svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C13 5.06 12.51 5 12 5z"/></svg></div><div><div class="pc__name">Daizinol</div><div class="pc__cat">Insecticide / Pesticide</div></div></div><div class="pc__body"><p class="pc__desc">Farm-grade pesticide for insects, ectoparasites and environmental pests around animal housing and farm premises.</p><div class="pc__sizes"><span class="sz">Powder — &#8358;1,200</span><span class="sz">Spray — &#8358;1,500</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Daizinol" target="_blank" class="btn--pc">Order Now</a></div></div>
+        </div>
+        <div class="bulk-note" style="margin-top:28px"><p>Contact Sales for Distributor Pricing and Bulk Orders</p><div class="btns"><a href="https://wa.me/2348037276090" target="_blank" class="btn btn--red">Contact Sales</a></div></div>
+      </div>
+      <div class="ptc" id="tab-other">
+        <div class="pg">
+          <div class="pc reveal"><div class="pc__bar pc__bar--n"></div><div class="pc__head"><div class="pc__ico pc__ico--n"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div><div><div class="pc__name">Piperazine Citrate</div><div class="pc__cat">Anthelmintic / Dewormer</div></div></div><div class="pc__body"><p class="pc__desc">Effective dewormer for roundworms and intestinal parasites in poultry, pigs and small animals. Safe, proven formulation.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,200</span><span class="sz">50g — &#8358;700</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Piperazine Citrate" target="_blank" class="btn--pc">Order Now</a></div></div>
+          <div class="pc reveal"><div class="pc__bar pc__bar--y"></div><div class="pc__head"><div class="pc__ico pc__ico--y"><svg viewBox="0 0 24 24"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2z"/></svg></div><div><div class="pc__name">Chick Starter</div><div class="pc__cat">Early Growth Supplement</div></div></div><div class="pc__body"><p class="pc__desc">Specialized nutritional supplement for newly hatched chicks. Reduces early mortality, boosts immune function and promotes rapid growth.</p><div class="pc__sizes"><span class="sz">100g — &#8358;1,400</span><span class="sz">50g — &#8358;800</span></div></div><div class="pc__foot"><a href="https://wa.me/2348037276090?text=Order: Chick Starter" target="_blank" class="btn--pc">Order Now</a></div></div>
+        </div>
+        <div class="bulk-note" style="margin-top:28px"><p>Contact Sales for Distributor Pricing and Bulk Orders</p><div class="btns"><a href="https://wa.me/2348037276090" target="_blank" class="btn btn--red">Contact Sales</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ANIMAL CATEGORIES -->
+<section class="animals section" id="categories">
+  <div class="container">
+    <div class="text-center reveal" style="position:relative;z-index:1;margin-bottom:48px">
+      <span class="label" style="color:var(--yellow)">Animal Health Categories</span>
+      <h2 style="color:#fff">Solutions Across Every Farming Sector</h2>
+      <div class="rule rule--c rule--y"></div>
+      <p style="color:rgba(255,255,255,.7);max-width:520px;margin:0 auto">From fish pond to poultry house to cattle farm — Haybee has the right veterinary product for every animal health challenge in Nigeria.</p>
+    </div>
+    <div class="animals__grid">
+      <div class="an-card an-card--r reveal"><div class="an-ico"><svg viewBox="0 0 24 24" fill="white"><path d="M20 12c0-1.1-.55-2.08-1.39-2.67C18.87 8.87 19 8.45 19 8c0-1.66-1.34-3-3-3-.75 0-1.42.29-1.93.76C13.67 5.3 13 5 12.25 5c-.87 0-1.64.44-2.09 1.11C9.74 6.04 9.39 6 9 6 7.34 6 6 7.34 6 9c0 .45.13.87.39 1.33C5.55 10.92 5 11.9 5 13c0 1.86 1.51 3.37 3.37 3.37h8.26C18.49 16.37 20 14.86 20 13v-1z"/></svg></div><h3>Aquaculture</h3><p>Specialized antibiotics and health products for catfish, tilapia, shrimp and other aquaculture species. Supporting Nigeria's rapidly growing fish farming sector.</p><span class="an-pill">Fish Antibiotics &bull; Growth Supplements</span></div>
+      <div class="an-card an-card--y reveal"><div class="an-ico"><svg viewBox="0 0 24 24" fill="white"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div><h3>Poultry</h3><p>Comprehensive solutions for broilers, layers, breeders and turkeys — antibiotics, anticoccidials, multivitamins, egg boosters and respiratory treatments.</p><span class="an-pill">Antibiotics &bull; Anticoccidials &bull; Vitamins</span></div>
+      <div class="an-card an-card--b reveal"><div class="an-ico"><svg viewBox="0 0 24 24" fill="white"><path d="M6.5 10h-2v5h2v-5zm12 0h-2v5h2v-5zm4 0h-2v5h2v-5zm-6.5-.5c0-.28-.22-.5-.5-.5H9.5c-.28 0-.5.22-.5.5v5.5h2v-2h2v2h2V9.5z"/></svg></div><h3>Livestock</h3><p>Proven health management for cattle, pigs, goats and sheep. Antibiotics, dewormers, nutritional supplements and growth promoters for commercial operations.</p><span class="an-pill">Antibiotics &bull; Dewormers &bull; Supplements</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HAYBEE -->
+<section class="why section" id="why">
+  <div class="container"><div class="why-grid">
+    <div class="feat-list reveal">
+      <span class="label">Why Haybee</span>
+      <h2 style="color:var(--navy-dark);margin-top:4px">The Animal Health Partner Nigerian Agriculture Trusts</h2>
+      <div class="rule"></div>
+      <div class="feat"><div class="feat__ico feat__ico--r"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Proven Manufacturing Quality</h4><p>Every batch tested before distribution. Consistent therapeutic efficacy from our Lagos production line to your farm.</p></div></div>
+      <div class="feat"><div class="feat__ico feat__ico--n"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div><h4>Deep Market Penetration</h4><p>30+ years of distributor relationships, veterinary store partnerships and farm supply networks across all 36 states.</p></div></div>
+      <div class="feat"><div class="feat__ico feat__ico--y"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><h4>Reliable Supply Chain</h4><p>Consistent product availability and rapid order fulfillment. Your business never runs short when you partner with Haybee.</p></div></div>
+      <div class="feat"><div class="feat__ico feat__ico--r"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><h4>Local Product Knowledge</h4><p>Formulations designed for Nigerian farming conditions and local disease pressures — not generic imported products.</p></div></div>
+      <div style="margin-top:6px"><a href="#contact" class="btn btn--red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.13 2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z"/></svg>Contact Sales Team</a></div>
+    </div>
+    <div class="why-visual reveal">
+      <img src="logo.png" alt="Haybee Agrosciences">
+      <h3>30+ Years of Animal Health Excellence</h3>
+      <p>Manufacturing quality veterinary pharmaceuticals at 278 Ijegun Road, Lagos — Nigeria's trusted animal health partner.</p>
+      <div class="why-nums">
+        <div class="why-num"><strong>30+</strong><span>Years Mfg.</span></div>
+        <div class="why-num"><strong>36</strong><span>States</span></div>
+        <div class="why-num"><strong>20+</strong><span>Products</span></div>
+        <div class="why-num"><strong>3+</strong><span>Exports</span></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- DISTRIBUTION -->
+<section class="section" id="distribution" style="background:#fff">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:48px">
+      <span class="label">Distribution Network</span>
+      <h2 style="color:var(--navy-dark)">Nationwide Reach. Direct Relationships.</h2>
+      <div class="rule rule--c"></div>
+      <p class="sub">Haybee products reach farmers and veterinary professionals across every region of Nigeria through our established wholesale and retail distribution network.</p>
+    </div>
+    <div class="dist-grid">
+      <div class="dc dc--r reveal"><div class="dc__ico"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg></div><h3>Wholesale Distribution</h3><p>Direct supply to registered distributors, agro-allied wholesale businesses and major farm supply chains. Competitive bulk pricing with reliable delivery schedules.</p></div>
+      <div class="dc dc--n reveal"><div class="dc__ico"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h12v-2H7.42l.9-1.75H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.47 4H5.21L4.27 2H1z"/></svg></div><h3>Retail Partners</h3><p>Products available through veterinary stores, agricultural input dealers and farm supply retailers in major cities and rural communities across Nigeria.</p></div>
+      <div class="dc dc--y reveal"><div class="dc__ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><h3>Regional Coverage</h3><p>Serving Lagos, Ibadan, Abuja, Kano, Enugu, Port Harcourt and all farming communities across the six geopolitical zones of Nigeria.</p></div>
+    </div>
+    <div style="margin-top:44px;background:var(--navy-dark);border-radius:var(--radius-xl);padding:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center" class="reveal">
+      <div><h3 style="color:#fff;margin-bottom:10px">Become a Haybee Distributor</h3><p style="color:rgba(255,255,255,.65);max-width:480px">We are actively expanding our distribution network. If you operate a veterinary supplies business, agro-allied wholesale, or agricultural retail chain — we want to partner with you.</p></div>
+      <div style="display:flex;flex-direction:column;gap:9px;align-items:center;flex-shrink:0"><a href="https://wa.me/2348037276090?text=I'm interested in becoming a Haybee distributor" target="_blank" class="btn btn--yellow">Become a Distributor</a><span style="font-size:.7rem;color:rgba(255,255,255,.35);font-weight:600">Or call 08037276090</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="section" id="quality" style="background:var(--off-white)">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:48px">
+      <span class="label">Quality &amp; Compliance</span>
+      <h2 style="color:var(--navy-dark)">Manufacturing to the Highest Standards</h2>
+      <div class="rule rule--c"></div>
+      <p class="sub">Every Haybee product is manufactured, tested, and registered to meet Nigerian and international veterinary pharmaceutical standards.</p>
+    </div>
+    <div class="qual-grid">
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><div><h4>NAFDAC Product Registration</h4><p>All Haybee animal health products are duly registered with NAFDAC, ensuring full legal compliance and consumer safety across Nigeria.</p></div></div>
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6z"/></svg></div><div><h4>GMP Manufacturing Practices</h4><p>Our facility operates under Good Manufacturing Practice principles — documented procedures, trained personnel, and controlled production environments.</p></div></div>
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><h4>Batch Testing &amp; Quality Control</h4><p>Every production batch undergoes laboratory testing for potency, purity and stability before release. Comprehensive batch records ensure full traceability.</p></div></div>
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div><div><h4>Shelf Life &amp; Stability Management</h4><p>Rigorous stability studies ensure our formulations maintain therapeutic efficacy throughout their shelf life — from production to your farm.</p></div></div>
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div><h4>Packaging &amp; Labelling Compliance</h4><p>All products labelled in full compliance with veterinary pharmaceutical regulations — active ingredients, dosage, withdrawal periods and storage conditions.</p></div></div>
+      <div class="qi reveal"><div class="qi__ico"><svg viewBox="0 0 24 24" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg></div><div><h4>Veterinary Council Compliance</h4><p>Operating in full compliance with Nigerian Veterinary Council regulations and industry standards for pharmaceutical manufacturing and distribution.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPORTS -->
+<section class="section" id="exports" style="background:#fff">
+  <div class="container"><div class="ex-grid">
+    <div class="reveal">
+      <span class="label">Export Division</span>
+      <h2 style="color:var(--navy-dark)">African Veterinary Products For Regional Markets</h2>
+      <div class="rule"></div>
+      <p>Haybee Agrosciences is positioned for continental expansion. Our registered product portfolio, scalable manufacturing and deep understanding of African animal health challenges make us an ideal regional supply partner.</p>
+      <ul class="ex-list">
+        <li><div class="ex-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Registered Export-Ready Products</strong><span>NAFDAC-registered formulations meeting international quality requirements</span></div></li>
+        <li><div class="ex-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Scalable Manufacturing Capacity</strong><span>Production capability to fulfill large regional order volumes</span></div></li>
+        <li><div class="ex-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Competitive Regional Pricing</strong><span>African-manufactured products priced well versus imported alternatives</span></div></li>
+        <li><div class="ex-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Development Finance Ready</strong><span>Structured for DFI engagement, institutional partnerships and grant eligibility</span></div></li>
+        <li><div class="ex-chk"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Private Label Capability</strong><span>OEM and private label manufacturing for regional distribution partners</span></div></li>
+      </ul>
+      <a href="https://wa.me/2348037276090?text=I'm interested in export/regional partnership with Haybee" target="_blank" class="btn btn--navy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>Enquire About Export Partnerships</a>
+    </div>
+    <div class="ex-visual reveal">
+      <h3>Regional Market Presence</h3>
+      <p>Haybee products available or sought after across key West and Central African agricultural markets.</p>
+      <div class="reg-grid">
+        <div class="reg"><strong>Nigeria</strong><span>Primary Market &bull; Head Office</span></div>
+        <div class="reg"><strong>West Africa</strong><span>Regional Distribution</span></div>
+        <div class="reg"><strong>Central Africa</strong><span>Emerging Market</span></div>
+        <div class="reg"><strong>East Africa</strong><span>Expansion Target</span></div>
+      </div>
+      <div class="open-for"><p>Open To Partnership With:</p><div class="of-tags"><span class="of-tag">Export Partners</span><span class="of-tag">Regional Distributors</span><span class="of-tag">Government Procurement</span><span class="of-tag">NGO Supply</span><span class="of-tag">Development Agencies</span><span class="of-tag">Investors</span></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about" style="background:var(--off-white)">
+  <div class="container"><div class="ab-grid">
+    <div class="reveal">
+      <span class="label">Our Story</span>
+      <h2 style="color:var(--navy-dark)">Three Decades of Commitment to Animal Health in Africa</h2>
+      <div class="rule"></div>
+      <p>Haybee Agrosciences Enterprises was founded with a singular purpose: to provide Nigerian farmers with access to high-quality, affordable veterinary pharmaceutical products manufactured on Nigerian soil.</p>
+      <p style="margin-top:13px">Operating from our facility in Ijegun, Lagos, we have grown from a local veterinary supplier into one of Nigeria's recognized animal health manufacturers — serving thousands of veterinary professionals, farmers, and distributors nationwide.</p>
+      <div class="val-grid">
+        <div class="vi vi--n"><h4>Mission</h4><p>To manufacture trusted veterinary pharmaceuticals that improve animal health, productivity and food security across Nigeria and Africa.</p></div>
+        <div class="vi vi--r"><h4>Vision</h4><p>To be Africa's most trusted veterinary pharmaceutical manufacturer — expanding from Nigeria to serve the entire continent.</p></div>
+        <div class="vi vi--y"><h4>Integrity</h4><p>We manufacture products we would trust with our own animals. No compromises on quality, efficacy or safety — ever.</p></div>
+        <div class="vi vi--n"><h4>Innovation</h4><p>Continuously developing formulations tailored to specific disease challenges facing African livestock and aquaculture farmers.</p></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="label">Company Milestones</span>
+      <h3 style="color:var(--navy-dark);margin-bottom:8px">Our Journey</h3>
+      <div class="ms-list">
+        <div class="ms"><div class="ms__dot"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div><div class="ms__yr">Early 1990s</div><div class="ms__txt">Haybee Agrosciences Enterprises founded in Lagos, Nigeria. Initial focus on veterinary pharmaceutical distribution and supply to local farms.</div></div></div>
+        <div class="ms"><div class="ms__dot"><svg viewBox="0 0 24 24" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg></div><div><div class="ms__yr">Late 1990s</div><div class="ms__txt">Expansion into pharmaceutical manufacturing. First Haybee-branded veterinary products introduced. NAFDAC product registration begins.</div></div></div>
+        <div class="ms"><div class="ms__dot"><svg viewBox="0 0 24 24" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><div class="ms__yr">2000s</div><div class="ms__txt">Major portfolio expansion. Antibiotics, anticoccidials and nutritional supplements introduced. Nationwide distribution network established.</div></div></div>
+        <div class="ms"><div class="ms__dot"><svg viewBox="0 0 24 24" fill="white"><path d="M20 12c0-1.1-.55-2.08-1.39-2.67C18.87 8.87 19 8.45 19 8c0-1.66-1.34-3-3-3z"/></svg></div><div><div class="ms__yr">2010s</div><div class="ms__txt">Entry into aquaculture. Fishmycin launched as Nigeria's fish farming industry booms. First export activities initiated.</div></div></div>
+        <div class="ms"><div class="ms__dot"><svg viewBox="0 0 24 24" fill="white"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg></div><div><div class="ms__yr">2020s — Present</div><div class="ms__txt">Full portfolio modernization. Digital transformation. Regional export expansion. Investor readiness and preparation for African market leadership.</div></div></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi section">
+  <div class="container">
+    <div class="text-center reveal" style="position:relative;z-index:1;margin-bottom:48px"><span class="label" style="color:var(--yellow)">Customer Testimonials</span><h2 style="color:#fff">Trusted Across Nigeria's Farming Sector</h2><div class="rule rule--c rule--y"></div></div>
+    <div class="testi-grid">
+      <div class="tc reveal"><div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><p class="tc__text">Hayflox-20 has become our go-to treatment for respiratory challenges in our broiler houses. Consistent efficacy, fast results. We have been ordering from Haybee for over eight years and the quality has never disappointed.</p><div class="tc__author"><div class="tc__av" style="background:var(--red)">AO</div><div><div class="tc__name">Alhaji Abubakar O.</div><div class="tc__role">Commercial Poultry Farmer &bull; Ogun State</div></div></div></div>
+      <div class="tc reveal"><div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><p class="tc__text">Since switching to Fishmycin for our catfish ponds, we have seen a dramatic reduction in bacterial losses. Haybee understands fish farming in Nigeria. Their products actually work in our local conditions.</p><div class="tc__author"><div class="tc__av" style="background:var(--navy)">CE</div><div><div class="tc__name">Chukwuemeka E.</div><div class="tc__role">Aquaculture Farmer &bull; Delta State</div></div></div></div>
+      <div class="tc reveal"><div class="stars"><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><p class="tc__text">As a veterinary supply distributor in Kano, I rely on Haybee for consistent product availability. Their supply chain is dependable — critical when farmers are counting on us during disease outbreaks.</p><div class="tc__author"><div class="tc__av" style="background:var(--yellow-dark);color:var(--navy-dark)">FA</div><div><div class="tc__name">Fatima A.</div><div class="tc__role">Veterinary Supplies Distributor &bull; Kano</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="section" id="insights" style="background:#fff">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:48px"><span class="label">Insights &amp; Knowledge Hub</span><h2 style="color:var(--navy-dark)">Animal Health Knowledge for Nigerian Farmers</h2><div class="rule rule--c"></div><p class="sub">Expert guidance on fish farming, poultry management, livestock care, disease prevention and animal nutrition from Haybee's veterinary and agricultural specialists.</p></div>
+    <div class="ins-grid">
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,#006994,#00ACC1)"><svg viewBox="0 0 24 24"><path d="M20 12c0-1.1-.55-2.08-1.39-2.67C18.87 8.87 19 8.45 19 8c0-1.66-1.34-3-3-3z"/></svg></div><div class="ic__body"><div class="ic__tag">Aquaculture</div><h4>Preventing Bacterial Infections in Catfish Ponds: A Practical Guide for Nigerian Fish Farmers</h4><div class="ic__meta">Animal Health &bull; 8 min read</div></div></div>
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,var(--red-dark),var(--red-light))"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14z"/></svg></div><div class="ic__body"><div class="ic__tag">Poultry Health</div><h4>Understanding Coccidiosis: Symptoms, Treatment and Prevention in Commercial Broiler Production</h4><div class="ic__meta">Disease Management &bull; 6 min read</div></div></div>
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,#1B5E20,#388E3C)"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28z"/></svg></div><div class="ic__body"><div class="ic__tag">Animal Nutrition</div><h4>Multivitamin Supplementation for Maximizing Egg Production in Commercial Layer Poultry</h4><div class="ic__meta">Nutrition &bull; 5 min read</div></div></div>
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid))"><svg viewBox="0 0 24 24"><path d="M6.5 10h-2v5h2v-5zm12 0h-2v5h2v-5zm4 0h-2v5h2v-5z"/></svg></div><div class="ic__body"><div class="ic__tag">Livestock Management</div><h4>Deworming Protocols for Pigs and Goats: Timing, Products, and Resistance Management</h4><div class="ic__meta">Parasite Control &bull; 7 min read</div></div></div>
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,#4A0E8F,#7B1FA2)"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12z"/></svg></div><div class="ic__body"><div class="ic__tag">Disease Prevention</div><h4>Biosecurity Best Practices for Poultry Farms in Nigeria: Reducing Disease Entry and Spread</h4><div class="ic__meta">Farm Management &bull; 10 min read</div></div></div>
+      <div class="ic reveal"><div class="ic__thumb" style="background:linear-gradient(135deg,#E65100,#F57C00)"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V17h14v-5.82L23 9 12 3z"/></svg></div><div class="ic__body"><div class="ic__tag">Veterinary Best Practices</div><h4>Responsible Antibiotic Use in Animal Agriculture: Dosing, Withdrawal Periods and Resistance</h4><div class="ic__meta">Veterinary Guidance &bull; 9 min read</div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="reveal"><a href="https://wa.me/2348037276090?text=I'd like to speak with a Haybee animal health specialist" target="_blank" class="btn btn--outline-navy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.13 2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z"/></svg>Speak With An Animal Health Specialist</a></div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container"><div class="cta-band__inner reveal">
+    <h2>Ready to Order or Partner With Haybee?</h2>
+    <p>Whether you are a farmer ordering for your operation, a distributor seeking a reliable supplier, or an institution exploring partnership opportunities — we are ready to speak with you.</p>
+    <div class="btns">
+      <a href="https://wa.me/2348037276090?text=I'd like to place an order with Haybee" target="_blank" class="btn btn--yellow"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h12v-2H7.42l.9-1.75H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.47 4H5.21L4.27 2H1z"/></svg>Order Products</a>
+      <a href="https://wa.me/2348037276090?text=I'm interested in becoming a Haybee distributor" target="_blank" class="btn btn--outline-white">Become a Distributor</a>
+      <a href="#contact" class="btn btn--outline-white">Request Product Info</a>
+    </div>
+  </div></div>
+</div>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:var(--off-white)">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:52px"><span class="label">Contact Us</span><h2 style="color:var(--navy-dark)">Get In Touch With Our Team</h2><div class="rule rule--c"></div><p class="sub">Reach us for product orders, distributor enquiries, export partnerships, or product information requests.</p></div>
+    <div class="con-grid">
+      <div>
+        <div class="cin">
+          <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--red)"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><h4>Head Office</h4><p>278, Ijegun Road, Near Ilori Bus-Stop<br>Ijegun, Lagos, Nigeria</p></div></div>
+          <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--navy)"><svg viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div><h4>Phone</h4><a href="tel:+2348037276090">08037276090</a></div></div>
+          <div class="cin-item reveal"><div class="cin-item__ico" style="background:#25D366"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><h4>WhatsApp Orders</h4><a href="https://wa.me/2348037276090" target="_blank">Chat on WhatsApp — 24/7</a></div></div>
+          <div style="background:var(--navy-dark);border-radius:var(--radius-lg);padding:22px" class="reveal"><h4 style="color:var(--yellow);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:13px">Business Hours</h4><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">Monday – Friday</span><span style="color:#fff;font-weight:800">8:00am – 5:00pm</span></div><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">Saturday</span><span style="color:#fff;font-weight:800">9:00am – 2:00pm</span></div><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">WhatsApp Orders</span><span style="color:var(--yellow);font-weight:800">24 / 7</span></div></div></div>
+        </div>
+      </div>
+      <div class="con-form reveal">
+        <h3>Distributor &amp; Order Enquiry</h3>
+        <p>Send us a message and our sales team will respond within 24 hours.</p>
+        <div class="fr"><div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name"></div><div class="fg"><label>Phone Number</label><input type="tel" placeholder="08012345678"></div></div>
+        <div class="fr"><div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div><div class="fg"><label>Business Type</label><select><option>Select type</option><option>Poultry Farmer</option><option>Fish Farmer</option><option>Livestock Farmer</option><option>Veterinary Store</option><option>Wholesale Distributor</option><option>Agro-Allied Retailer</option><option>Export Partner</option><option>Institution / NGO</option><option>Other</option></select></div></div>
+        <div class="fg"><label>Products of Interest</label><input type="text" placeholder="e.g. Corymed-20, Fishmycin, Quinocox..."></div>
+        <div class="fg"><label>Message</label><textarea placeholder="Tell us about your order requirements, location or partnership interest..."></textarea></div>
+        <a href="https://wa.me/2348037276090?text=Hello, submitting a distributor enquiry from your website." target="_blank" class="btn btn--navy" style="width:100%;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send Via WhatsApp</a>
+        <p style="font-size:.7rem;color:var(--text-light);text-align:center;margin-top:9px;font-weight:600">Opens WhatsApp. We respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__main"><div class="container"><div class="fg-grid">
+    <div class="fb"><img src="logo.png" alt="Haybee Agrosciences Enterprises"><p>Manufacturing and supplying trusted veterinary pharmaceuticals and animal health products across Nigeria and Africa for over 30 years.</p><address>278, Ijegun Road, Near Ilori Bus-Stop<br>Ijegun, Lagos, Nigeria</address><a href="tel:+2348037276090" class="tel">08037276090</a></div>
+    <div class="fc"><h5>Products</h5><ul><li><a href="#products">Antibiotics</a></li><li><a href="#products">Anticoccidials</a></li><li><a href="#products">Vitamins &amp; Minerals</a></li><li><a href="#products">Aquaculture Products</a></li><li><a href="#products">Pest Control</a></li><li><a href="#products">Full Product List</a></li></ul></div>
+    <div class="fc"><h5>Company</h5><ul><li><a href="#about">About Us</a></li><li><a href="#quality">Quality &amp; Compliance</a></li><li><a href="#exports">Exports</a></li><li><a href="#distribution">Distribution</a></li><li><a href="#insights">Insights</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="fc"><h5>Order &amp; Enquire</h5><ul><li><a href="https://wa.me/2348037276090" target="_blank">Order on WhatsApp</a></li><li><a href="https://wa.me/2348037276090?text=Distributor enquiry" target="_blank">Become a Distributor</a></li><li><a href="https://wa.me/2348037276090?text=Export partnership" target="_blank">Export Partnerships</a></li><li><a href="https://wa.me/2348037276090?text=Product info request" target="_blank">Request Product Info</a></li><li><a href="tel:+2348037276090">Call Sales Team</a></li></ul></div>
+  </div></div></div>
+  <div class="container"><div class="footer__bottom"><p>&copy; 2026 Haybee Agrosciences Enterprises. All rights reserved. Lagos, Nigeria.</p><div class="footer__certs"><span class="cert">NAFDAC Registered</span><span class="cert">GMP Compliant</span><span class="cert">30+ Years</span></div></div></div>
+</footer>
+
+<script>
+const nav=document.getElementById("mainNav");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>40));
+document.getElementById("hamburger").addEventListener("click",()=>document.getElementById("mobileMenu").classList.toggle("open"));
+function closeMobile(){document.getElementById("mobileMenu").classList.remove("open")}
+function switchTab(id,btn){
+  document.querySelectorAll(".ptc").forEach(e=>e.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(e=>e.classList.remove("active"));
+  document.getElementById("tab-"+id).classList.add("active");
+  btn.classList.add("active");
+}
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add("visible"),i*70);obs.unobserve(e.target)}});
+},{threshold:.08});
+document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
+document.querySelectorAll("a[href^='#']").forEach(a=>{
+  a.addEventListener("click",e=>{e.preventDefault();const t=document.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"})});
+});
+</script>
+</body>
+</html>
