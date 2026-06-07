@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Haybee Agrosciences Enterprises | Veterinary Pharmaceuticals & Animal Health Nigeria</title>
 <meta name="description" content="Haybee Agrosciences Enterprises – Nigeria's trusted veterinary pharmaceutical manufacturer for 30+ years. Antibiotics, multivitamins, aquaculture, poultry, and livestock health products.">
 <meta name="keywords" content="veterinary pharmaceuticals Nigeria, animal health products Nigeria, fish medication Nigeria, poultry medication Nigeria, aquaculture health solutions, livestock supplements, veterinary drugs Nigeria">
@@ -33,8 +33,8 @@
   --radius: 6px; --radius-lg: 14px; --radius-xl: 22px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"Montserrat",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:"Montserrat",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden;width:100%;max-width:100vw}
 h1,h2,h3,h4{font-family:"Lora",serif;line-height:1.15}
 h1{font-size:clamp(2.1rem,4.5vw,3.8rem);font-weight:700}
 h2{font-size:clamp(1.7rem,3vw,2.8rem);font-weight:700}
@@ -73,7 +73,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .btn--outline-navy{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn--outline-navy:hover{background:var(--navy);color:#fff}
 /* HERO */
-.hero{min-height:100vh;padding-top:68px;background:var(--navy-dark);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero{min-height:100vh;padding-top:68px;background:var(--navy-dark);display:flex;align-items:center;position:relative;overflow:hidden;width:100%}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 80% 50%,rgba(27,43,107,.5) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 5% 80%,rgba(204,31,31,.12) 0%,transparent 50%)}
 .hero::after{content:"";position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;border:60px solid rgba(245,216,71,.05)}
 .hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
@@ -96,8 +96,8 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .hero__badge strong{display:block;font-size:.95rem;font-weight:800}
 .hero__badge span{font-size:.68rem;font-weight:600;opacity:.85}
 /* TRUST BAR */
-.trust-bar{background:var(--yellow);border-top:3px solid var(--yellow-dark);border-bottom:3px solid var(--yellow-dark)}
-.trust-bar__inner{display:flex;justify-content:center;overflow-x:auto}
+.trust-bar{background:var(--yellow);border-top:3px solid var(--yellow-dark);border-bottom:3px solid var(--yellow-dark);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.trust-bar__inner{display:flex;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;min-width:max-content}
 .trust-item{display:flex;align-items:center;gap:10px;padding:16px 30px;border-right:2px solid rgba(27,43,107,.14);white-space:nowrap;flex-shrink:0}
 .trust-item:last-child{border-right:none}
 .trust-item__icon{width:32px;height:32px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -136,7 +136,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .tab-btn.active{border-color:var(--navy);background:var(--navy);color:#fff}
 .tab-btn:hover:not(.active){border-color:var(--navy);color:var(--navy)}
 .pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:22px}
-.pc{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.pc{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;height:auto}
 .pc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
 .pc__bar{height:7px}
 .pc__bar--r{background:var(--red)}
@@ -153,9 +153,9 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .pc__ico svg{width:22px;height:22px}
 .pc__name{font-family:"Lora",serif;font-size:1.05rem;font-weight:700;color:var(--navy-dark)}
 .pc__cat{font-size:.68rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
-.pc__body{padding:2px 20px 14px;flex:1}
+.pc__body{padding:2px 20px 14px;flex:1 1 auto}
 .pc__desc{font-size:.85rem;color:var(--text-mid);line-height:1.65;margin-bottom:12px}
-.pc__sizes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.pc__sizes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;min-height:0}
 .sz{background:var(--light-blue);color:var(--navy);padding:3px 10px;border-radius:100px;font-size:.7rem;font-weight:700}
 .pc__target{font-size:.7rem;font-weight:700;color:var(--text-light);letter-spacing:.03em}
 .pc__foot{padding:10px 20px 18px}
@@ -276,7 +276,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .of-tag{background:rgba(255,255,255,.09);padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.78)}
 /* ABOUT */
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.ms-list{margin-top:32px;position:relative}
+.ms-list{margin-top:32px;position:relative;overflow:hidden}
 .ms-list::before{content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;background:var(--border)}
 .ms{display:flex;gap:18px;margin-bottom:26px;position:relative}
 .ms__dot{width:34px;height:34px;border-radius:50%;background:var(--navy);flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;border:3px solid #fff;box-shadow:var(--shadow-sm)}
@@ -316,7 +316,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .cin-item__ico{width:42px;height:42px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .cin-item__ico svg{width:19px;height:19px}
 .cin-item h4{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);font-weight:800;margin-bottom:4px}
-.cin-item a,.cin-item p{color:var(--navy-dark);font-weight:600;font-size:.9rem;text-decoration:none}
+.cin-item a,.cin-item p{color:var(--navy-dark);font-weight:600;font-size:.88rem;text-decoration:none;word-break:break-all}
 .cin-item a:hover{color:var(--red)}
 .con-form{background:#fff;padding:40px;border-radius:var(--radius-xl);box-shadow:var(--shadow-md);border-top:4px solid var(--navy)}
 .con-form h3{font-size:1.45rem;margin-bottom:5px;color:var(--navy-dark)}
@@ -352,32 +352,148 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 /* RESPONSIVE */
+/* ── TABLET ── */
 @media(max-width:1024px){
-  .ov-grid,.why-grid,.ex-grid,.ab-grid,.con-grid{grid-template-columns:1fr;gap:40px}
+  .ov-grid,.why-grid,.ex-grid,.ab-grid,.con-grid{grid-template-columns:1fr;gap:36px}
   .hero__grid{grid-template-columns:1fr}
   .hero__visual{display:none}
-  .fg-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .fg-grid{grid-template-columns:1fr 1fr;gap:24px}
   .animals__grid,.testi-grid,.ins-grid{grid-template-columns:1fr 1fr}
   .dist-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:768px){
-  .nav__links,.nav__cta{display:none}
-  .nav__hamburger{display:flex}
-  .section{padding:60px 0}
-  .hero{min-height:auto;padding:108px 0 52px}
-  .animals__grid,.testi-grid,.ins-grid,.dist-grid,.qual-grid{grid-template-columns:1fr}
-  .fg-grid{grid-template-columns:1fr}
-  .pg{grid-template-columns:1fr}
-  .fr{grid-template-columns:1fr}
-  .trust-bar__inner{justify-content:flex-start}
-  .reg-grid,.val-grid{grid-template-columns:1fr}
-  .cta-band .btns{flex-direction:column;align-items:center}
+  .qual-grid{grid-template-columns:1fr 1fr}
 }
 
+/* ── MOBILE ── */
 @media(max-width:768px){
-  #whitelabel .section > div > div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
-  #whitelabel [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
-  #whitelabel [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  /* global */
+  *{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{overflow-x:hidden;width:100%;max-width:100vw}
+  .container{padding:0 16px;width:100%;max-width:100%}
+  .section{padding:52px 0}
+  img{max-width:100%;height:auto}
+
+  /* nav */
+  .nav__links,.nav__cta{display:none}
+  .nav__hamburger{display:flex}
+  .nav__logo img{height:38px}
+  .nav__inner{height:60px}
+
+  /* hero */
+  .hero{min-height:auto;padding:72px 0 44px}
+  .hero h1{font-size:1.9rem;line-height:1.2}
+  .hero__sub{font-size:.9rem}
+  .hero__eyebrow{font-size:.65rem;padding:6px 14px}
+  .hero__ctas{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero__ctas .btn{width:100%;justify-content:center}
+
+  /* trust bar */
+  .trust-bar__inner{justify-content:flex-start;gap:0}
+  .trust-item{padding:12px 16px;flex-shrink:0}
+  .trust-item strong{font-size:.72rem}
+  .trust-item span{font-size:.62rem}
+
+  /* overview */
+  .ov-grid{grid-template-columns:1fr;gap:28px}
+  .ov-stats{grid-template-columns:1fr 1fr;gap:12px}
+  .stat-box{padding:16px}
+  .stat-box strong{font-size:1.7rem}
+  .ov-visual{padding:28px 20px}
+  .ov-visual img{width:110px}
+
+  /* products tabs */
+  .products__tabs{gap:6px}
+  .tab-btn{padding:7px 14px;font-size:.7rem}
+  .pg{grid-template-columns:1fr;gap:16px}
+  .pc__head{padding:14px 16px 10px}
+  .pc__body{padding:2px 16px 12px}
+  .pc__foot{padding:8px 16px 16px}
+  .bulk-note{padding:20px 16px}
+
+  /* animal cards */
+  .animals__grid{grid-template-columns:1fr;gap:14px}
+  .an-card{padding:28px 20px}
+
+  /* why */
+  .why-grid{grid-template-columns:1fr;gap:28px}
+  .feat-list{gap:12px}
+  .feat{padding:14px}
+  .why-visual{padding:28px 20px}
+  .why-visual img{width:120px}
+  .why-nums{grid-template-columns:1fr 1fr;gap:10px}
+
+  /* distribution */
+  .dist-grid{grid-template-columns:1fr;gap:14px}
+  .dc{padding:24px 20px}
+  /* distributor CTA banner */
+  .dist-grid ~ div[style]{display:flex!important;flex-direction:column!important;gap:18px!important;padding:28px 20px!important}
+
+  /* quality */
+  .qual-grid{grid-template-columns:1fr;gap:12px}
+  .qi{padding:16px}
+
+  /* contract manufacturing */
+  #whitelabel .container > div[style*="grid-template-columns"]{grid-template-columns:1fr!important;gap:16px!important}
+  #whitelabel [style*="grid-template-columns:repeat(2,1fr)"]{grid-template-columns:1fr!important;gap:16px!important}
+  #whitelabel [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:16px!important}
+  #whitelabel [style*="padding:44px 40px"]{padding:24px 16px!important}
+  #whitelabel [style*="padding:36px 28px"]{padding:24px 18px!important}
+  #whitelabel [style*="padding:32px"]{padding:20px 16px!important}
+
+  /* exports */
+  .ex-grid{grid-template-columns:1fr;gap:28px}
+  .reg-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .ex-visual{padding:28px 20px}
+  .ex-visual h3{font-size:1.25rem}
+
+  /* about */
+  .ab-grid{grid-template-columns:1fr;gap:32px}
+  .val-grid{grid-template-columns:1fr;gap:10px}
+  .ms-list{margin-top:20px}
+
+  /* testimonials */
+  .testi-grid{grid-template-columns:1fr;gap:14px}
+  .tc{padding:22px 18px}
+
+  /* insights */
+  .ins-grid{grid-template-columns:1fr;gap:14px}
+  .ic__thumb{height:120px}
+
+  /* cta band */
+  .cta-band{padding:52px 0}
+  .cta-band h2{font-size:1.6rem}
+  .cta-band .btns{flex-direction:column;align-items:center;gap:10px}
+  .cta-band .btns .btn{width:100%;max-width:320px;justify-content:center}
+
+  /* contact */
+  .con-grid{grid-template-columns:1fr;gap:28px}
+  .cin{gap:12px}
+  .cin-item{padding:14px}
+  .con-form{padding:24px 16px}
+  .fr{grid-template-columns:1fr;gap:0}
+
+  /* footer */
+  .fg-grid{grid-template-columns:1fr;gap:28px}
+  .footer__main{padding:44px 0 28px}
+  .footer__bottom{flex-direction:column;align-items:flex-start;gap:12px}
+  .footer__certs{flex-wrap:wrap}
+  .fb img{height:40px}
+
+  /* headings scale */
+  h2{font-size:1.6rem}
+  h3{font-size:1.2rem}
+
+  /* capabilities inner grid */
+  .cap-inner-grid{grid-template-columns:1fr!important;gap:20px!important}
+
+  /* wa float position */
+  .wa{bottom:16px;right:16px;width:50px;height:50px}
+  .wa svg{width:24px;height:24px}
+
+  /* buttons full width in sections */
+  .feat-list>.btn,.why-visual .btn{width:100%;justify-content:center}
+
+  /* section header sub */
+  .sub{font-size:.9rem}
 }
 </style>
 </head>
@@ -635,9 +751,9 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
       <div class="dc dc--n reveal"><div class="dc__ico"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h12v-2H7.42l.9-1.75H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.47 4H5.21L4.27 2H1z"/></svg></div><h3>Retail Partners</h3><p>Products available through veterinary stores, agricultural input dealers and farm supply retailers in major cities and rural communities across Nigeria.</p></div>
       <div class="dc dc--y reveal"><div class="dc__ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><h3>Regional Coverage</h3><p>Serving Lagos, Ibadan, Abuja, Kano, Enugu, Port Harcourt and all farming communities across the six geopolitical zones of Nigeria.</p></div>
     </div>
-    <div style="margin-top:44px;background:var(--navy-dark);border-radius:var(--radius-xl);padding:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center" class="reveal">
+    <div style="margin-top:44px;background:var(--navy-dark);border-radius:var(--radius-xl);padding:28px 20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between" class="reveal">
       <div><h3 style="color:#fff;margin-bottom:10px">Become a Haybee Distributor</h3><p style="color:rgba(255,255,255,.65);max-width:480px">We are actively expanding our distribution network. If you operate a veterinary supplies business, agro-allied wholesale, or agricultural retail chain — we want to partner with you.</p></div>
-      <div style="display:flex;flex-direction:column;gap:9px;align-items:center;flex-shrink:0"><a href="https://wa.me/2348037276090?text=I'm interested in becoming a Haybee distributor" target="_blank" class="btn btn--yellow">Become a Distributor</a><span style="font-size:.7rem;color:rgba(255,255,255,.35);font-weight:600">Or email sales@haybeeagrosciences.com</span></div>
+      <div style="display:flex;flex-direction:column;gap:9px;align-items:center;flex-shrink:0;min-width:200px"><a href="https://wa.me/2348037276090?text=I'm interested in becoming a Haybee distributor" target="_blank" class="btn btn--yellow">Become a Distributor</a><span style="font-size:.7rem;color:rgba(255,255,255,.35);font-weight:600">Or email sales@haybeeagrosciences.com</span></div>
     </div>
   </div>
 </section>
@@ -698,7 +814,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
 
     <!-- CAPABILITIES GRID -->
     <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-xl);padding:44px 40px" class="reveal">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="cap-inner-grid">
         <div>
           <span class="label" style="color:var(--yellow)">Our Manufacturing Capabilities</span>
           <h3 style="color:#fff;font-size:1.5rem;margin-bottom:16px">What We Can Manufacture For You</h3>
@@ -730,7 +846,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
           </div>
         </div>
         <div>
-          <div style="background:var(--navy);border-radius:var(--radius-lg);padding:32px;border:1px solid rgba(255,255,255,.1)">
+          <div style="background:var(--navy);border-radius:var(--radius-lg);padding:24px 16px;border:1px solid rgba(255,255,255,.1)">
             <h4 style="color:var(--yellow);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;font-family:Montserrat,sans-serif">Who This Is For</h4>
             <div style="display:flex;flex-direction:column;gap:10px">
               <div style="background:rgba(255,255,255,.06);padding:12px 16px;border-radius:8px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.85)">Agro-Allied Companies seeking own-brand products</div>
@@ -777,7 +893,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
       </ul>
       <a href="https://wa.me/2348037276090?text=I'm interested in export/regional partnership with Haybee" target="_blank" class="btn btn--navy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>Enquire About Export Partnerships</a>
     </div>
-    <div class="ex-visual reveal">
+    <div class="ex-visual reveal" style="overflow:hidden">
       <h3>Regional Market Presence</h3>
       <p>Haybee products available or sought after across key West and Central African agricultural markets.</p>
       <div class="reg-grid">
@@ -870,7 +986,7 @@ p{line-height:1.75;color:var(--text-mid);font-size:.95rem}
       <div>
         <div class="cin">
           <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--red)"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><h4>Head Office</h4><p><strong style="display:block;margin-bottom:4px">Production / GMP Facility:</strong>28, Ibaro Road, Ijagemo, Iba LCDA, Lagos<br><strong style="display:block;margin:8px 0 4px">Head Office:</strong>278, Ijegun Road, Ikotun, Lagos</p></div></div>
-          <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--navy)"><svg viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div><h4>Phone / WhatsApp</h4><a href="tel:+2348081290709">+234 8081290709</a><a href="tel:+2348103306689" style="display:block;margin-top:3px;color:var(--navy-dark);font-weight:600;font-size:.9rem;text-decoration:none">+234 8103306689</a></div></div>
+          <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--navy)"><svg viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div><h4>Phone / WhatsApp</h4><a href="tel:+2348081290709">+234 8081290709</a><a href="tel:+2348103306689" style="display:block;margin-top:6px;color:var(--navy-dark);font-weight:600;font-size:.88rem;text-decoration:none">+234 8103306689</a></div></div>
           <div class="cin-item reveal"><div class="cin-item__ico" style="background:var(--navy)"><svg viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><div><h4>Email</h4><a href="mailto:sales@haybeeagrosciences.com">sales@haybeeagrosciences.com</a></div></div>
           <div class="cin-item reveal"><div class="cin-item__ico" style="background:#25D366"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><h4>WhatsApp Orders</h4><a href="https://wa.me/2348037276090" target="_blank">Chat on WhatsApp — 24/7</a></div></div>
           <div style="background:var(--navy-dark);border-radius:var(--radius-lg);padding:22px" class="reveal"><h4 style="color:var(--yellow);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:13px">Business Hours</h4><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">Monday – Friday</span><span style="color:#fff;font-weight:800">8:00am – 5:00pm</span></div><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">Saturday</span><span style="color:#fff;font-weight:800">9:00am – 2:00pm</span></div><div style="display:flex;justify-content:space-between;font-size:.83rem"><span style="color:rgba(255,255,255,.5);font-weight:600">WhatsApp Orders</span><span style="color:var(--yellow);font-weight:800">24 / 7</span></div></div></div>
